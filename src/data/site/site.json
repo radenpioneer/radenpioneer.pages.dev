@@ -1,0 +1,6 @@
+{
+  "$schema": "../../../.astro/collections/site.schema.json",
+  "title": "radenpioneer.pages.dev",
+  "description": "Blog sederhana tentang tips web development dan catatan lainnya.",
+  "favicon": "/favicon.svg"
+}
