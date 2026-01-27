@@ -22,3 +22,12 @@ const { title, ...props } = Astro.props
     <slot name='head' />
   </Fragment>
 </Layout>
+
+<style lang='scss' is:global>
+  main p:not(hgroup p) img {
+    width: 100%;
+    max-width: 480px;
+    display: block;
+    margin-inline: auto;
+  }
+</style>

@@ -10,4 +10,6 @@ type: post
 
 Pos pertama!
 
+![](~/assets/test-2.jpg)
+
 Horeee.
