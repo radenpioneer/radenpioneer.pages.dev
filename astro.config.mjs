@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-
-import cloudflare from '@astrojs/cloudflare';
+import { defineConfig } from 'astro/config'
+import cloudflare from '@astrojs/cloudflare'
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +10,11 @@ export default defineConfig({
       enabled: true
     },
 
-    imageService: "cloudflare"
-  })
-});
+    imageService: 'compile'
+  }),
+
+  integrations: [mdx()],
+  image: {
+    layout: 'constrained'
+  }
+})

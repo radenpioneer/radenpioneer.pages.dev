@@ -1,7 +1,7 @@
 on:
-  push: 
+  push:
     branches: [main]
-  pull_request: 
+  pull_request:
     branches: [main]
 
 jobs:
@@ -25,4 +25,3 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           command: pages deploy
-    
