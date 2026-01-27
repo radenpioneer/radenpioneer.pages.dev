@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  site: CollectionEntry<'site'>
+}
+
+const { site } = Astro.props
+---
+
+<header class='container'>
+  <nav>
+    <ul>
+      <li>
+        <a href='/'>{site.data.title}</a>
+      </li>
+    </ul>
+    <ul></ul>
+  </nav>
+</header>
