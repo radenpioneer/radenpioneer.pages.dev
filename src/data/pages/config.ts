@@ -24,7 +24,8 @@ const pages = defineCollection({
                 src: image(),
                 caption: z.string().optional()
               })
-              .optional()
+              .optional(),
+            tags: z.string().array().optional()
           })
         ])
       )

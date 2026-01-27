@@ -1,6 +1,7 @@
 ---
 import BaseLayout, { type Props as BaseLayoutProps } from './base.astro'
 import Header from '~/components/header.astro'
+import Footer from '~/components/footer.astro'
 import { getEntry } from 'astro:content'
 
 export interface Props extends BaseLayoutProps {
@@ -15,6 +16,7 @@ const site = await getEntry('site', 'site')
 <BaseLayout {...props}>
   <Header site={site!} />
   <slot />
+  <Footer />
 
   <Fragment slot='head'>
     <title>
