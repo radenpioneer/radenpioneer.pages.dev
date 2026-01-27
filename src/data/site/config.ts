@@ -9,7 +9,14 @@ const site = defineCollection({
       title: z.string().max(120),
       description: z.string().max(160),
       logo: image().optional(),
-      favicon: z.string().optional()
+      favicon: z.string().optional(),
+      nav: z
+        .object({
+          label: z.string(),
+          url: z.string()
+        })
+        .array()
+        .optional()
     })
 })
 
