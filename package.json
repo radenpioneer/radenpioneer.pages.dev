@@ -12,10 +12,10 @@
     "preview": "astro build && wrangler pages dev"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
-    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/cloudflare": "^13.0.0-beta.2",
+    "@astrojs/mdx": "^5.0.0-beta.2",
     "@picocss/pico": "^2.1.1",
-    "astro": "^5.16.15",
+    "astro": "^6.0.0-beta.4",
     "sass": "^1.97.3"
   },
   "devDependencies": {

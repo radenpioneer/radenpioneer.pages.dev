@@ -5,15 +5,12 @@ import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    },
-
-    imageService: 'compile'
-  }),
-
   integrations: [mdx()],
+  adapter: cloudflare(),
+  build: {
+    client: './',
+    server: './_worker.js'
+  },
   image: {
     layout: 'constrained'
   }
