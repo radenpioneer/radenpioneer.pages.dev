@@ -4,5 +4,6 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "radenpioneer"
+  "name": "radenpioneer",
+  "pages_build_output_dir": "dist"
 }
