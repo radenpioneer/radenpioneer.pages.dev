@@ -8,9 +8,10 @@ import { getEntry } from 'astro:content'
 export interface Props extends BaseLayoutProps {
   title?: string
   description?: string
+  hidden?: boolean
 }
 
-const { title, description, ...props } = Astro.props
+const { title, description, hidden, ...props } = Astro.props
 const site = await getEntry('site', 'site')
 ---
 
@@ -29,6 +30,7 @@ const site = await getEntry('site', 'site')
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='icon' href='/favicon.ico' />
     <slot name='head' />
+    {hidden && <meta name='robots' content='noindex, nofollow' />}
   </Fragment>
 </BaseLayout>
 

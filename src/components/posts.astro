@@ -1,7 +1,10 @@
 ---
 import { getCollection } from 'astro:content'
 
-const posts = await getCollection('pages', (post) => post.data.type === 'post')
+const posts = await getCollection(
+  'pages',
+  (post) => !post.data.draft && post.data.type === 'post' && !post.data.hidden
+)
 ---
 
 <section class='grid'>
