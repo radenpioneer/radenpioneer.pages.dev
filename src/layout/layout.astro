@@ -14,7 +14,7 @@ const { title, description, ...props } = Astro.props
 const site = await getEntry('site', 'site')
 ---
 
-<BaseLayout {...props} x-bind:class='$store.isSidebarOpen && __inert' x-data>
+<BaseLayout {...props} x-bind:class='$store.isSidebarOpen && "__inert"' x-data>
   <Header site={site!} />
   <slot />
   <Footer />
