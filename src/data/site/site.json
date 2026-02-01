@@ -5,6 +5,10 @@
   "favicon": "/favicon.svg",
   "nav": [
     {
+      "label": "Beranda",
+      "url": "/"
+    },
+    {
       "label": "Tentang",
       "url": "/about"
     }

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config'
 import cloudflare from '@astrojs/cloudflare'
 import mdx from '@astrojs/mdx'
+import alpinejs from '@astrojs/alpinejs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
     imageService: 'compile'
   }),
 
-  integrations: [mdx()],
+  integrations: [mdx(), alpinejs()],
   image: {
     layout: 'constrained'
   }
